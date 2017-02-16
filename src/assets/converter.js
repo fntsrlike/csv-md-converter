@@ -26,7 +26,7 @@ let parseMarkdown = function (markdownText) {
       throw new Error('The separator row of Markdown text has invalid format.')
     }
 
-    if (line.match(/(-{3,})|(:-{2,})|(-{2,}:)|(:-{1,}:)/) === null) {
+    if (line.match(/(-{3,})|(:-{2,})|(-{2,}:)|(:-+:)/) === null) {
       throw new Error('The separator row of Markdown text has invalid format of align sign.')
     }
   }
